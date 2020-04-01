@@ -5,7 +5,7 @@ const online = true;
 
 function Contact(props) {
     return (
-        <contact className="Contact">
+        <div className="Contact">
             <img
                 src= {props.avatar}
                 alt={props.name}
@@ -13,14 +13,14 @@ function Contact(props) {
             />
             <div>
                 <h4 className="name">{props.name}</h4>
-                <status className="status">
+                <div className="status">
                     <div className={props.online ? "status-online" : "status-offline"}></div>
                     <p className="status-text">
                         {props.online ? "Online" : "Offline"}
                     </p>
-                </status>
+                </div>
             </div>
-        </contact>
+        </div>
     )
 }
 
