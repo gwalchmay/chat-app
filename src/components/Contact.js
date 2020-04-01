@@ -2,21 +2,20 @@ import React from 'react';
 import './Contact.css'
 const online = true;
 
-function Contact() {
+function Contact(props) {
     return (
         <contact className="Contact">
             <img
-                src="https://www.disneyphile.fr/wp-content/uploads/2020/02/american-horror-story-macaulay-culkin-1920x1080.jpg"
-                alt='Macaulay Culkin'
+                src= {props.avatar}
+                alt={props.name}
                 className="avatar"
             />
             <div>
-                <h4 className="name">Kevin McAllister</h4>
-
+                <h4 className="name">{props.name}</h4>
                 <status className="status">
-                    <div className="status-online"></div>
+                    <div className={props.online ? "status-online" : "status-offline"}></div>
                     <p className="status-text">
-                        {online ? "Online" : "Offline"}
+                        {props.online ? "Online" : "Offline"}
                     </p>
                 </status>
             </div>
