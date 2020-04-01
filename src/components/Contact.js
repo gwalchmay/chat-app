@@ -27,7 +27,6 @@ function Contact(props) {
 Contact.propTypes = {
     avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    status: PropTypes.bool.isRequired,
   };
 
 
